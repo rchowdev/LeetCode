@@ -2,12 +2,10 @@
  * @param {string} S
  * @return {string}
  */
-var removeDuplicates = function(S) {
+const removeDuplicates = (S) => {
     const resArr = []
-    for(let i = 0; i < S.length; i++){
-        resArr[resArr.length - 1] === S[i] ?
-            resArr.pop()
-            : resArr.push(S[i])
+    for(let ch of S) {
+        resArr[resArr.length - 1] === ch ? resArr.pop() : resArr.push(ch)
     }
     return resArr.join('')
 };
